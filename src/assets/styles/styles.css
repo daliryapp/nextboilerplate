@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Peyda;
+    font-style: normal;
+    font-weight: 500;
+    src: url('./PeydaWeb-Medium.eot');
+    src: url('./PeydaWeb-Medium.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */
+        url('./PeydaWeb-Medium.woff2') format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/
+        url('./PeydaWeb-Medium.woff') format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+        url('./Peyda-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Peyda;
+    font-style: normal;
+    font-weight: 300;
+    src: url('./PeydaWeb-light.eot');
+    src: url('./PeydaWeb-light.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */
+        url('./PeydaWeb-light.woff2') format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/
+        url('./PeydaWeb-light.woff') format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+        url('./Peyda-light.ttf') format('truetype');
+}

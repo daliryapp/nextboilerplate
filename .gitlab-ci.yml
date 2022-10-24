@@ -1,0 +1,39 @@
+stages:
+  - deploy
+
+Deploy_Dev:
+  stage: deploy
+  only:
+    - development
+  script:
+    - cp $ENV_DEV .env
+    - docker-compose -f docker-compose-develop.yml build dev-webapp
+    - docker-compose -f docker-compose-develop.yml kill dev-webapp
+    - docker-compose -f docker-compose-develop.yml up -d dev-webapp
+  tags:
+    - dev
+
+
+Deploy_Test:
+  stage: deploy
+  only:
+    - test
+  script:
+    - cp $ENV_TEST .env
+    - docker-compose -f docker-compose-test.yml build test-webapp
+    - docker-compose -f docker-compose-test.yml kill test-webapp
+    - docker-compose -f docker-compose-test.yml up -d test-webapp
+  tags:
+    - test
+
+Deploy_Stage:
+  stage: deploy
+  only:
+    - stage
+  script:
+    - cp $ENV_STAGE .env
+    - docker-compose -f docker-compose-stage.yml build stage-webapp
+    - docker-compose -f docker-compose-stage.yml kill stage-webapp
+    - docker-compose -f docker-compose-stage.yml up -d stage-webapp
+  tags:
+    - stage

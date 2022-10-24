@@ -1,0 +1,29 @@
+overwrite: true
+schema:
+  - 'https://devgateway.gardenoflove.ir/cmsschema'
+
+generates:
+  src/types/serverTypes.ts:
+    plugins:
+      - typescript
+    config:
+      useTypeImports: true
+  src/:
+    preset: near-operation-file
+    documents:
+      - src/graphql/cms/queries/*.gql
+      - src/graphql/cms/mutations/*.gql
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: types/serverTypes.ts
+      importTypesNamespace: ServerTypes
+    plugins:
+      - typescript-operations
+      - typescript-rtk-query:
+          importBaseApiFrom: 'core/client/baseApi/cms'
+    config:
+      addDocBlocks: false
+      exportFragmentSpreadSubTypes: true
+      exportHooks: true
+      skipTypename: true
+      useTypeImports: true

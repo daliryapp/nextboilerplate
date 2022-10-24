@@ -1,0 +1,27 @@
+const config = {
+    GOOGLE_CAPTCHA_SECRET: process.env.GOOGLE_CAPTCHA_SECRET,
+    BASE_URL: process.env.BASE_URL,
+    SITE_NAME: process.env.SITE_NAME,
+    SITE_DOMAIN: process.env.SITE_DOMAIN,
+    MAIN_IMAGE_ADDRESS: process.env.MAIN_IMAGE_ADDRESS,
+    SMALL_IMAGE_ADDRESS: process.env.SMALL_IMAGE_ADDRESS,
+    QR_LINK: process.env.QR_LINK
+}
+const {
+    GOOGLE_CAPTCHA_SECRET,
+    BASE_URL,
+    SITE_NAME,
+    SITE_DOMAIN,
+    MAIN_IMAGE_ADDRESS,
+    SMALL_IMAGE_ADDRESS,
+    QR_LINK
+} = config;
+export {
+    GOOGLE_CAPTCHA_SECRET,
+    BASE_URL,
+    SITE_NAME,
+    SITE_DOMAIN,
+    MAIN_IMAGE_ADDRESS,
+    SMALL_IMAGE_ADDRESS,
+    QR_LINK
+};

@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  stage-webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: 'front-stage-webapp'
+    ports:
+      - 127.0.0.1:2082:80

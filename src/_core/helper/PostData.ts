@@ -1,0 +1,8 @@
+import Logo from "assets/images/pictures/Logo1.png";
+import postPic from 'assets/images/pictures/PostPic.png'
+import postPic2 from "assets/images/pictures/PostPic2.png";
+export const postData = [
+    {logo:Logo, username:"CFG Charity", time:"2h ago", No:true, img:postPic, EndTime:10, StartDonate:150, EndDonate:1500, donate:50, title:"Yse HOPE in Action / Hope en action", description:"Mohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do it Mohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do itMohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do it", comment:400, like:132523},
+    {logo:Logo, username:"Masood shaterabadi", time:"20h ago", No:false, img:postPic2, title:"Yse HOPE in Action / Hope en action", description:"Mohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do it Mohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do itMohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do it", comment:400, like:132523},
+    {logo:Logo, username:"Masoud mahram", time:"a week ago", No:false, img:null, title:"Yse HOPE in Action / Hope en action", description:"Mohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do it Mohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do itMohsen yegane wants to make sick child happy. we have prepared a very entart. but he can do it", comment:400, like:132523},
+]

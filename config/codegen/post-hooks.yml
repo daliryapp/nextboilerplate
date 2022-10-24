@@ -1,0 +1,29 @@
+overwrite: true
+schema:
+  - 'https://devgateway.gardenoflove.ir/postserverschema'
+
+generates:
+  src/types/serverTypes.ts:
+    plugins:
+      - typescript
+    config:
+      useTypeImports: true
+  src/:
+    preset: near-operation-file
+    documents:
+      - src/graphql/post/queries/*.gql
+      - src/graphql/post/mutations/*.gql
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: types/serverTypes.ts
+      importTypesNamespace: ServerTypes
+    plugins:
+      - typescript-operations
+      - typescript-rtk-query:
+          importBaseApiFrom: 'core/client/baseApi/post'
+    config:
+      addDocBlocks: false
+      exportFragmentSpreadSubTypes: true
+      exportHooks: true
+      skipTypename: true
+      useTypeImports: true
