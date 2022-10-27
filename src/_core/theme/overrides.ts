@@ -10,6 +10,13 @@ const overrides: Components = {
 
         }
     },
+    MuiAppBar: {
+        styleOverrides: {
+            root: {
+                backgroundColor: palette.onPrimary.main,
+            }
+        }
+    },
     MuiCssBaseline: {
         styleOverrides: `
         @font-face {

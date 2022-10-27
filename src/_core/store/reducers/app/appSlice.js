@@ -32,6 +32,9 @@ const appSlice = createSlice({
       state.mobileSidebar = !state.mobileSidebar;
     },
     //dashboard sidebar
+    toogleDrawer: (state) => {
+      state.sidebar = !state.sidebar;
+    },
     showSidebar: (state) => {
       state.sidebar = true;
     },
@@ -73,6 +76,7 @@ export const {
   closeExpandedSidebar,
   setSignedNavigateLink,
   setModal,
+  toogleDrawer,
 } = appSlice.actions;
 
 export default appSlice;

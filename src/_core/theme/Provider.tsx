@@ -1,9 +1,20 @@
 import { ThemeProvider } from "@mui/material";
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import theme from "./theme";
+import createCache from '@emotion/cache';
+// import { prefixer } from 'stylis';
+import rtlPlugin from 'stylis-plugin-rtl';
+import { CacheProvider } from '@emotion/react';
 
-const Provider: FC = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+interface Props {
+  children: ReactNode
+}
+const Provider: FC = ({ children }: Props) => {
+  const cacheRtl = createCache({
+    key: 'muirtl',
+    stylisPlugins: [rtlPlugin],
+  });
+  return <CacheProvider value={cacheRtl}><ThemeProvider theme={theme}>{children}</ThemeProvider></CacheProvider>;
 };
 
 export default Provider;

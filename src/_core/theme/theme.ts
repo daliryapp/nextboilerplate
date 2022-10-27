@@ -16,7 +16,7 @@ export const getThemeOptions = (direction: Direction, palette: any): any => {
     typography.fontFamily = fontFamily
 
     return {
-        // direction: 'rtl',
+        direction: 'rtl',
         palette,
         shadows,
         typography,

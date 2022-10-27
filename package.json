@@ -10,7 +10,9 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --format=pretty --quiet",
     "lint-fix": "yarn lint  --quiet=false --fix",
-    "lint-ci": "eslint --format=pretty"
+    "lint-ci": "eslint --format=pretty",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -19,7 +21,8 @@
     }
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
+    "@emotion/cache": "^11.10.3",
+    "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.6.0",
     "@material-ui/core": "^5.0.0-beta.5",
     "@material-ui/lab": "^5.0.0-alpha.44",
@@ -48,13 +51,25 @@
     "react-query": "^3.34.16",
     "react-redux": "^7.2.6",
     "react-toastify": "^9.0.5",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "stylis": "^4.1.2",
+    "stylis-plugin-rtl": "^2.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
     "@next/bundle-analyzer": "^12.0.3",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^14.14.20",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "babel-loader": "^8.2.5",
     "cypress": "^6.2.0",
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
