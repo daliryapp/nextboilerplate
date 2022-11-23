@@ -9,23 +9,27 @@ export const register = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const {
-        email = undefined,
-        mobile = undefined,
-        name,
+        mobile,
+        firstName,
+        lastName,
         password,
-        referredCode,
-        gRecaptchaResponse,
-        countryId,
+        confirmPassword,
+        captchaToken,
+        login,
+        langKey,
+        clubType,
       } = data;
 
-      const response = await axios.post(`${BASE_URL}user/register`, {
-        email,
+      const response = await axios.post(`${BASE_URL}register`, {
         mobile,
-        name,
+        firstName,
+        lastName,
         password,
-        referredCode,
-        gRecaptchaResponse,
-        countryId,
+        confirmPassword,
+        captchaToken,
+        login,
+        langKey,
+        clubType,
       });
 
       return { ...response.data?.data, verifyType: "REGISTER" };
@@ -45,26 +49,15 @@ export const login = createAsyncThunk(
   "user/login",
   async (data, { rejectWithValue }) => {
     try {
-      const {
-        email = undefined,
-        password,
-        gRecaptchaResponse,
-        isManager = false,
-      } = data;
+      const { username = undefined, password, captchaToken, rememberMe } = data;
       let response = null;
-      if (!isManager) {
-        response = await axios.post(`${BASE_URL}user/login`, {
-          email,
-          password,
-          gRecaptchaResponse,
-        });
-      } else {
-        response = await axios.post(`${BASE_URL}manager/login`, {
-          email,
-          password,
-          gRecaptchaResponse,
-        });
-      }
+
+      response = await axios.post(`${BASE_URL}authenticate`, {
+        username,
+        password,
+        captchaToken,
+        rememberMe,
+      });
 
       if (!response.data?.data?.isVerify) {
         return { ...response.data?.data, verifyType: "VERIFY_USER" };

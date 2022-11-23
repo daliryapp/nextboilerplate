@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography, Container, Box, IconButton } from "@mui/material";
+import { Stack, Typography, Container, Box, IconButton } from "@mui/material";
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
@@ -13,13 +13,17 @@ const Footer = () => {
         position: 'fixed',
         bottom: 0,
         width: '100%',
-        boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.30)'
+        boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.30)',
+        zIndex: 10,
+        backgroundColor: 'onPrimary.main'
       }}
     >
       <Container
         maxWidth="xs"
         sx={{
           p: 1,
+          pl: { xs: 2, sm: 0 },
+          pr: { xs: 2, sm: 0 },
         }}
       >
         <Stack flexDirection="row-reverse" justifyContent="space-between">

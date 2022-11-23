@@ -5,16 +5,16 @@ const primary: DefaultPalette = {
   get contrastText() {
     return accent.main
   },
-  50: '#fde9e7',
-  100: '#f9beb8',
-  200: '#f69389',
-  300: '#f2685a',
-  400: '#ef4836',
-  500: '#d52411',
-  600: '#a51c0d',
-  700: '#761409',
-  800: '#470c06',
-  900: '#180402',
+  50: '#DCF3FA',
+  100: '#A7DCEB',
+  200: '#50A2B9',
+  300: '#31839A',
+  400: '#78C1D5',
+  500: '#78C1D5',
+  600: '#78C1D5',
+  700: '#78C1D5',
+  800: '#78C1D5',
+  900: '#78C1D5',
 }
 
 const secondary: DefaultPalette = {
@@ -38,7 +38,7 @@ const secondary: DefaultPalette = {
 
 const neutral: DefaultPalette = {
   get main() {
-    return this[500]
+    return this[50]
   },
   get contrastText() {
     return accent.main

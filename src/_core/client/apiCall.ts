@@ -1,8 +1,9 @@
 import axios, { Method } from 'axios';
+import { BASE_URL } from '_core/configs/config';
 
 const ApiCall = async (method: Method, path: string, data?: any, params?: any, formatResult?: Function) => {
   return await axios({
-    url: process.env.NEXT_PUBLIC_BASE_URL + path,
+    url: BASE_URL + path,
     method,
     params,
     headers: {

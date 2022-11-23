@@ -1,12 +1,9 @@
 import { FC } from "react";
 import {
-    Grid,
     AppBar,
     Box,
     Stack,
     IconButton,
-    Button,
-    Badge,
     Container
 } from "@mui/material";
 import AppbarStyle from './appBarStyle';
@@ -34,8 +31,14 @@ const Appbar: FC = () => {
             >
                 <Box sx={{
                     position: 'absolute',
-                    left: -4,
-                    top: -4
+                    pl: { xs: 1, sm: 3 },
+                    pr: { xs: 1, sm: 3 },
+                    left: { xs: 0, sm: 0 },
+                    top: { xs: -4, sm: 0 },
+                    '& button': {
+                        pr: 0,
+                        pl: 0
+                    }
                 }}>
                     <IconButton onClick={onMenuButtonClick}>
                         <MenuOutlinedIcon />

@@ -17,6 +17,13 @@ const overrides: Components = {
             }
         }
     },
+    MuiContainer: {
+        styleOverrides: {
+            root: {
+
+            }
+        }
+    },
     MuiCssBaseline: {
         styleOverrides: `
         @font-face {
